@@ -18,7 +18,7 @@
       <dd><%= @actor.image_url %></dd>
 
       <dt>Number of characters</dt>
-      <dd> <%= Movie.where(:director_id => @director.id).count%></dd>
+      <dd> <%= Movie.where(:character_id => @character.id).count%></dd>
 
     </dl>
 
