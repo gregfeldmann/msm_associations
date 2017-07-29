@@ -13,7 +13,7 @@
 
 class Actor < ApplicationRecord
     
-     has_many(:characters, :class_name => "Character", :foreign_key => "movie_id")
+     has_many(:character, :class_name => "Character", :foreign_key => "movie_id")
      
      has_many(:movie, :class_name => "Movie", :foreign_key => "movie_id")
       
