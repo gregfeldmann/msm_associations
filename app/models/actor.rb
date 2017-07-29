@@ -16,6 +16,8 @@ class Actor < ApplicationRecord
      has_many(:characters, :class_name => "Character", :foreign_key => "movie_id")
      
      has_many(:movies, :class_name => "Movie", :foreign_key => "director_id")
+     
+      has_many(:actors, :class_name => "Actor", :foreign_key => "director_id")
       
  # name: must be present; must be unique in combination with dob
  validates :name, :presence => true, :uniqueness => { :scope => :dob }
