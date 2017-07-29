@@ -15,6 +15,7 @@ class Director < ApplicationRecord
 
  has_many(:movies, :class_name => "Movies", :foreign_key => "movie_id")
  
+ 
  # name: must be present; must be unique in combination with dob
   validates :name, :presence => true, :uniqueness => { :scope => :dob }
   
