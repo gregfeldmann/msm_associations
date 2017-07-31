@@ -22,6 +22,12 @@
       <dd> <%= Character.where(:actor_id => @actor.id).count %></dd>
     </dl>
 
+<ul>
+<% Movie.where(:actor_id => @actor.id).each do |movie| %>
+  <li><a href="/movies/<%= movie.id %>"><%= movie.title %></a></li>
+  <% end %>
+</ul>
+
 <div class="page-header">
   <h3>Add Character</h3>
 </div>
