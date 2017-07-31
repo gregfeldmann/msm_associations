@@ -14,6 +14,7 @@ class DirectorsController < ApplicationController
 
   def new
     @director = Director.new
+     @movie = Movie.new
 
     render("directors/new.html.erb")
   end
