@@ -20,6 +20,7 @@ class Movie < ApplicationRecord
  has_many(:characters, :class_name => "Character", :foreign_key => "movie_id")
  
  has_many(:actors, :class_name => "Movie", :foreign_key => "director_id")
+ #put in from end of read me with through
     
    # Movie:
  # director_id: must be present
