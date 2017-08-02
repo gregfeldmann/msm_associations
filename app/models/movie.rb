@@ -19,7 +19,9 @@ class Movie < ApplicationRecord
  
  has_many(:characters, :class_name => "Character", :foreign_key => "movie_id")
  
- has_many(:actors, :class_name => "Movie", :foreign_key => "director_id")
+  has_many :characters
+  has_many :actors, :through => :characters
+   
  #put in from end of read me with through
     
    # Movie:
